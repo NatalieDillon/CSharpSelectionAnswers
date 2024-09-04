@@ -57,5 +57,27 @@ namespace CSharpSelection
 			return result;
 		}
 
+		// Q3
+		public static void DiceRoll()
+		{
+			Random random = new();
+			int dice1 = random.Next(0, 7);
+			int dice2 = random.Next(0, 7);
+			int dice3 = random.Next(0, 7);
+			Console.WriteLine($"You rolled a {dice1}, a {dice2} and a {dice3}");
+			if ((dice1 == dice2) && (dice2 == dice3))
+			{
+				Console.WriteLine("Three of a kind");
+			}
+			else if ((dice1 == dice2) || (dice2 == dice3) || (dice1 == dice3))
+			{
+				Console.WriteLine("You have a pair");
+			}
+			else
+			{
+				Console.WriteLine("Sorry you lose");
+			}
+		}
+
 	}
 }

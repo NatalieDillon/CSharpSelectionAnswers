@@ -23,6 +23,10 @@ namespace CSharpSelection
 			Console.WriteLine($"i is a vowel: {SelectionExercises.IsVowel('i')}");
 			Console.WriteLine($"? is a vowel: {SelectionExercises.IsVowel('?')}");
 			Console.WriteLine();
+
+			Console.WriteLine("Q3:");
+			SelectionExercises.DiceRoll();
+			Console.WriteLine();
 		}
 	}
 }
