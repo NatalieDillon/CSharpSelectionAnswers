@@ -27,6 +27,14 @@ namespace CSharpSelection
 			Console.WriteLine("Q3:");
 			SelectionExercises.DiceRoll();
 			Console.WriteLine();
+
+			Console.WriteLine("Q4:");
+			Console.WriteLine($"4 is {SelectionExercises.ClassifyAngle(4)}");
+			Console.WriteLine($"90 is {SelectionExercises.ClassifyAngle(90)}");
+			Console.WriteLine($"94 is {SelectionExercises.ClassifyAngle(94)}");
+			Console.WriteLine($"180 is {SelectionExercises.ClassifyAngle(180)}");
+			Console.WriteLine($"355 is {SelectionExercises.ClassifyAngle(355)}");
+			Console.WriteLine($"370 is {SelectionExercises.ClassifyAngle(370)}");
 		}
 	}
 }

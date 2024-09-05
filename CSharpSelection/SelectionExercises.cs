@@ -1,5 +1,6 @@
 ﻿
 
+using System.ComponentModel.Design;
 using System.Linq;
 
 namespace CSharpSelection
@@ -77,6 +78,45 @@ namespace CSharpSelection
 			{
 				Console.WriteLine("Sorry you lose");
 			}
+		}
+
+		// Q4
+		public enum AngleType
+		{
+			Acute,
+			RightAngle,
+			Obtuse,
+			Straight,
+			Reflex,
+			Other
+		}
+		public static AngleType ClassifyAngle(int angle)
+		{
+			AngleType angleType = AngleType.Other;
+			if (angle > 0)
+			{
+				if (angle < 90)
+				{
+					angleType = AngleType.Acute;
+				}
+				else if (angle == 90)
+				{
+					angleType = AngleType.RightAngle;
+				}
+				else if (angle < 180)
+				{
+					angleType = AngleType.Obtuse;
+				}
+				else if (angle == 180)
+				{
+					angleType = AngleType.Straight;
+				}
+				else if (angle < 360)
+				{
+					angleType = AngleType.Reflex;
+				}
+			}
+			return angleType;
 		}
 
 	}
