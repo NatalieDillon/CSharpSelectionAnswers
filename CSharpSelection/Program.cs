@@ -35,6 +35,19 @@ namespace CSharpSelection
 			Console.WriteLine($"180 is {SelectionExercises.ClassifyAngle(180)}");
 			Console.WriteLine($"355 is {SelectionExercises.ClassifyAngle(355)}");
 			Console.WriteLine($"370 is {SelectionExercises.ClassifyAngle(370)}");
+			Console.WriteLine();
+			
+			Console.WriteLine("Q5:");
+			Console.Write("Please enter 0 for Rock. 1 for Paper. 2 for scissors: ");
+			int userInput = Convert.ToInt32(Console.ReadLine());
+			if (userInput < 0 || userInput > 2)
+			{
+				Console.WriteLine("Value entered is invalid");
+			}
+			else
+			{
+				SelectionExercises.RockPaperScissors((SelectionExercises.Choice)userInput);
+			}
 		}
 	}
 }

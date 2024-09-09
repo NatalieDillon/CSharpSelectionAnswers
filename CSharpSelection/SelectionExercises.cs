@@ -119,5 +119,33 @@ namespace CSharpSelection
 			return angleType;
 		}
 
+		public enum Choice
+		{
+			Rock,
+			Paper,
+			Scissors
+		}
+		public static void RockPaperScissors(Choice userChoice)
+		{
+			Random random = new();
+			Choice computerChoice = (Choice)random.Next(0, 3);
+			Console.WriteLine($"You chose {userChoice}");
+			Console.WriteLine($"The computer chose {computerChoice}");
+			if (userChoice == computerChoice)
+			{
+				Console.WriteLine($"You drew. {userChoice} draws with {computerChoice}");
+			}
+			else if ((userChoice == Choice.Rock && computerChoice == Choice.Scissors) ||
+				(userChoice == Choice.Paper && computerChoice == Choice.Rock) ||
+				(userChoice == Choice.Scissors && computerChoice == Choice.Paper))
+			{
+				Console.WriteLine($"You won. {userChoice} beats {computerChoice}");
+			}
+			else
+			{
+				Console.WriteLine($"You lost. {userChoice} loses to {computerChoice}");
+			}
+		}
+
 	}
 }
