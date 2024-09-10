@@ -199,7 +199,7 @@ namespace CSharpSelection
 			{
 				age = today.Year - dateOfBirth.Year;
 				DateTime birthday = new (today.Year, dateOfBirth.Month, dateOfBirth.Day);
-				if (birthday < today)
+				if (birthday > today)
 				{
 					age -= 1;
 				}
