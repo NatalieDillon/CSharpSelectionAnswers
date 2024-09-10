@@ -55,6 +55,10 @@ namespace CSharpSelection
 			Console.WriteLine($"1.3, 1, 1.3 is {SelectionExercises.ClassifyTriangle(1.3, 1, 1.3)}");
 			Console.WriteLine($"6, 6, 6 is {SelectionExercises.ClassifyTriangle(6, 6, 6)}");
 			Console.WriteLine();
+
+			Console.WriteLine("Q7:");
+			SelectionExercises.ConcertSale();
+			Console.WriteLine();
 		}
 	}
 }

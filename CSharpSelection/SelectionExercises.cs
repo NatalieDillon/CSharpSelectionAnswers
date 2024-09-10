@@ -7,6 +7,7 @@ namespace CSharpSelection
 {
 	public static class SelectionExercises
 	{
+
 		// Q1
 		public static string FizzBuzz(int number)
 		{
@@ -167,5 +168,28 @@ namespace CSharpSelection
 			}
 			return triangleType;
 		}
+
+		public static void ConcertSale()
+		{
+			Console.Write("Please enter the price in £: ");
+			if (!Decimal.TryParse(Console.ReadLine(), out decimal price))
+			{
+				Console.WriteLine("Sorry, price is not valid");
+			}
+			else
+			{
+				Console.Write("Please enter the number of tickets: ");
+				if (!Int32.TryParse(Console.ReadLine(), out int ticketNumber))
+				{
+					Console.WriteLine("Sorry, the number of tickets is not valid");
+				}
+				else
+				{
+					decimal total = price * ticketNumber;
+					Console.WriteLine($"The total cost is {total:C}");
+				}
+			}
+		}
+		
 	}
 }
