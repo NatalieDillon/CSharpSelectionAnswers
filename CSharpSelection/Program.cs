@@ -59,6 +59,14 @@ namespace CSharpSelection
 			Console.WriteLine("Q7:");
 			SelectionExercises.ConcertSale();
 			Console.WriteLine();
+
+			Console.WriteLine("Q8:");
+			DateTime birthDate1 = new(1993, 07, 20);
+			DateTime birthDate2 = new(1993, 12, 01);
+			DateTime birthDate3 = new(2024, 12, 22);
+			Console.WriteLine($"{birthDate1:D} Eligible for 18to30 :{SelectionExercises.EligibleFor18To30(birthDate1)}");
+			Console.WriteLine($"{birthDate2:D} Eligible for 18to30 :{SelectionExercises.EligibleFor18To30(birthDate2)}");
+		    Console.WriteLine($"{birthDate3:D} Eligible for 18to30 :{SelectionExercises.EligibleFor18To30(birthDate3)}");
 		}
 	}
 }

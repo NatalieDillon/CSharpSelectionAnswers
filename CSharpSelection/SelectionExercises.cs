@@ -190,6 +190,22 @@ namespace CSharpSelection
 				}
 			}
 		}
+
+		public static bool EligibleFor18To30(DateTime dateOfBirth)
+		{
+			DateTime today = DateTime.Today;
+			int age = 0;
+			if (dateOfBirth.Year < today.Year)
+			{
+				age = today.Year - dateOfBirth.Year;
+				DateTime birthday = new (today.Year, dateOfBirth.Month, dateOfBirth.Day);
+				if (birthday < today)
+				{
+					age -= 1;
+				}
+			}
+			return (age >= 18 && age <= 30);
+		}
 		
 	}
 }
