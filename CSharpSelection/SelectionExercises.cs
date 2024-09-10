@@ -133,19 +133,39 @@ namespace CSharpSelection
 			Console.WriteLine($"The computer chose {computerChoice}");
 			if (userChoice == computerChoice)
 			{
-				Console.WriteLine($"You drew. {userChoice} draws with {computerChoice}");
+				Console.WriteLine($"You drew. {userChoice} draws with {computerChoice}.");
 			}
 			else if ((userChoice == Choice.Rock && computerChoice == Choice.Scissors) ||
 				(userChoice == Choice.Paper && computerChoice == Choice.Rock) ||
 				(userChoice == Choice.Scissors && computerChoice == Choice.Paper))
 			{
-				Console.WriteLine($"You won. {userChoice} beats {computerChoice}");
+				Console.WriteLine($"You won. {userChoice} beats {computerChoice}.");
 			}
 			else
 			{
-				Console.WriteLine($"You lost. {userChoice} loses to {computerChoice}");
+				Console.WriteLine($"You lost. {userChoice} loses to {computerChoice}.");
 			}
 		}
 
+
+		public enum TriangleType
+		{
+			Equilateral,
+			Isosceles,
+			Scalene
+		}
+		public static TriangleType ClassifyTriangle(double side1, double side2, double side3)
+		{
+			TriangleType triangleType = TriangleType.Scalene;
+			if ((side1 == side2) && (side2 == side3))
+			{
+				triangleType = TriangleType.Equilateral;
+			}
+			else if ((side1 == side2) || (side2 == side3) || (side1 == side3))
+			{
+				triangleType = TriangleType.Isosceles;
+			}
+			return triangleType;
+		}
 	}
 }

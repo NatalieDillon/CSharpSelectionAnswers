@@ -48,6 +48,13 @@ namespace CSharpSelection
 			{
 				SelectionExercises.RockPaperScissors((SelectionExercises.Choice)userInput);
 			}
+			Console.WriteLine();
+
+			Console.WriteLine("Q6:");
+			Console.WriteLine($"3, 4, 5 is {SelectionExercises.ClassifyTriangle(3, 4, 5)}");
+			Console.WriteLine($"1.3, 1, 1.3 is {SelectionExercises.ClassifyTriangle(1.3, 1, 1.3)}");
+			Console.WriteLine($"6, 6, 6 is {SelectionExercises.ClassifyTriangle(6, 6, 6)}");
+			Console.WriteLine();
 		}
 	}
 }
